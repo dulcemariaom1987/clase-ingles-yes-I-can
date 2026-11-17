@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Inglés Básico · Yes, I can</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--ink:#1d1b3a;--v:#6c3bff;--p:#e6155f;--c:#0087b3;--g:#0c8f4e;--o:#d9480f;--y:#ffb400;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--ink);font:400 clamp(17px,2.2vw,19px)/1.6 Poppins,system-ui,"Segoe UI",Arial,sans-serif}
+.w{max-width:880px;margin:0 auto;padding:16px}
+.hero{background:linear-gradient(120deg,var(--v),var(--p) 60%,var(--o));color:#fff;border-radius:28px;padding:28px 20px;text-align:center}
+.hero h1{margin:0;font-size:clamp(30px,6vw,50px);line-height:1.15;font-weight:800}
+.hero p{margin:8px 0}
+.pill{display:inline-block;background:#fff;color:var(--ink);border-radius:999px;padding:4px 14px;margin:4px;font-size:.85em;font-weight:600}
+nav{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:16px 0}
+nav a{text-decoration:none;color:var(--ink);border:2px solid var(--y);background:#fff4d6;border-radius:999px;padding:4px 12px;font-size:.8em;font-weight:600}
+.card{border:3px solid var(--col);border-radius:26px;padding:20px;margin:24px 0;box-shadow:0 8px 0 var(--col);background:#fff}
+h2{margin:0 0 10px;font-size:clamp(22px,4vw,30px);color:var(--col);display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+h2 .n{background:var(--col);color:#fff;border-radius:50%;width:42px;height:42px;display:grid;place-items:center;font-size:.85em}
+h2 em{margin-left:auto;font:600 .5em Poppins,sans-serif;background:#fff4d6;color:var(--ink);border-radius:999px;padding:3px 12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.gc{border:2px solid var(--col);border-radius:18px;padding:12px;text-align:center;cursor:pointer}
+.gc .em{font-size:2em}.gc b{display:block;font-size:1.15em}.gc small{color:#5b5a7a;display:block}
+.say{cursor:pointer}.say:after{content:" 🔊";font-size:.8em}.gc.say:after{content:""}
+.say:hover{color:var(--col)}
+.spk{border:0;background:var(--col);color:#fff;border-radius:50%;width:38px;height:38px;font-size:16px;cursor:pointer;margin:0 4px;vertical-align:middle}
+.btn{background:var(--col);color:#fff;border:0;border-radius:999px;padding:12px 24px;font:700 1em Poppins,sans-serif;cursor:pointer;margin:6px 6px 6px 0}
+.btn:hover,.spk:hover{filter:brightness(1.15)}
+:focus-visible{outline:3px solid var(--y);outline-offset:2px}
+.box{background:#f5f3ff;border-radius:18px;padding:12px 16px;margin:12px 0}
+.tw{overflow-x:auto}table{border-collapse:collapse;width:100%}
+th,td{padding:8px 10px;border-bottom:2px solid #eee;text-align:left}th{background:var(--col);color:#fff}
+.q{padding:10px 0;border-bottom:2px dashed #e6e1ff}
+fieldset.q{border:0;border-bottom:2px dashed #e6e1ff;margin:0;min-width:0}
+legend{font-weight:600;padding:0}
+input[type=text],textarea,select{font:inherit;color:inherit;border:3px solid #d9d4ff;border-radius:14px;padding:8px 12px;background:#fff;max-width:100%}
+input[type=text]{width:7em}input.wide{width:min(100%,22em)}
+input:focus,textarea:focus,select:focus{outline:0;border-color:var(--col)}
+textarea{width:100%;min-height:130px}
+.opt{display:inline-flex;gap:8px;align-items:center;border:2px solid #e3defc;border-radius:999px;padding:6px 12px;margin:4px 6px 4px 0;cursor:pointer}
+.opt:has(input:checked){border-color:var(--col);background:#f5f3ff}
+.opt input{accent-color:var(--col);width:20px;height:20px}
+.fb{font-size:1.2em;margin-left:8px}
+.msg,.msg2{font-weight:700;color:var(--col)}
+.fab{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:9;background:var(--ink);color:#fff;border:0;border-radius:999px;padding:12px 18px;font:600 15px Poppins,sans-serif;box-shadow:0 4px 14px #0004;cursor:pointer}
+ul,ol{padding-left:1.3em}li{margin:6px 0}
+</style></head>
+<body><div class="w">
+<header class="hero">
+<h1>Yes, I can 💪</h1>
+<p>Información personal referida a habilidades y destrezas</p>
+<span class="pill">♾️ Sin límite de tiempo</span><span class="pill">🌱 Nivel: desde cero</span><span class="pill">⭐ Puntos: <b id="sc">0 / 76</b></span>
+<p>🔊 Toca cualquier texto en inglés para escucharlo (inglés americano).</p>
+</header>
+<nav><a href="#s1">1 Habilidades</a><a href="#s2">2 Can / can't</a><a href="#s3">3 Preguntas</a><a href="#s4">4 Listening</a><a href="#s5">5 Reading</a><a href="#s6">6 Dictado</a><a href="#s7">7 Writing</a><a href="#s8">8 Cierre</a></nav>
+<div class="box"><b>🎯 Al final de la clase podrás:</b>
+<ul><li>Nombrar habilidades y actividades (swim, cook, sing…).</li><li>Decir lo que puedes y lo que no puedes hacer con <b>can</b> y <b>can't</b>.</li><li>Preguntar y responder: <b>Can you…? Yes, I can. / No, I can't.</b></li><li>Decir qué tan bien haces algo (very well, well, a little).</li></ul></div>
+
+<section class="card" id="s1" style="--col:var(--v)">
+<h2><span class="n">1</span>Habilidades y destrezas</h2>
+<p>Toca cada tarjeta, escucha y <b>repite en voz alta</b>.</p>
+<div class="grid" id="gr"></div>
+<h3>✍️ Práctica: ¿qué significa?</h3><p>Elige el significado correcto en español.</p><div id="pq"></div>
+<button class="btn" data-chk="s1">✔ Verificar respuestas</button><p class="msg" aria-live="polite"></p>
+</section>
+
+<section class="card" id="s2" style="--col:var(--p)">
+<h2><span class="n">2</span>Can y can't</h2>
+<p><b>can</b> significa <b>poder</b> o <b>saber</b> hacer algo. Su negativo es <b>can't</b> (= cannot).</p>
+<div class="box">✅ <span class="say" data-t="I can swim.">I can swim.</span> (Sé nadar)<br>
+❌ <span class="say" data-t="I can't swim.">I can't swim.</span> (No sé nadar)<br>
+👉 Es igual para todas las personas, <b>sin -s</b>: <span class="say" data-t="She can sing.">She can sing.</span> (no “she cans”)<br>
+👉 Después de can va el <b>verbo base</b>: <span class="say" data-t="He can play the guitar.">He can play the guitar.</span> (no “he can plays”)</div>
+<h3>✍️ Práctica</h3><p>Elige la opción correcta. En el audio, la palabra que falta suena como “blank”.</p><div id="q2"></div>
+<button class="btn" data-chk="s2">✔ Verificar respuestas</button><p class="msg" aria-live="polite"></p>
+</section>
+
+<section class="card" id="s3" style="--col:var(--c)">
+<h2><span class="n">3</span>Preguntar y responder</h2>
+<p>Para preguntar, pon <b>Can</b> al inicio. Las respuestas cortas usan <b>can</b> o <b>can't</b>:</p>
+<div class="box">❓ <span class="say" data-t="Can you swim?">Can you swim?</span> → ✅ <span class="say" data-t="Yes, I can.">Yes, I can.</span> / ❌ <span class="say" data-t="No, I can't.">No, I can't.</span><br>
+❓ <span class="say" data-t="Can she cook?">Can she cook?</span> → ✅ <span class="say" data-t="Yes, she can.">Yes, she can.</span> / ❌ <span class="say" data-t="No, she can't.">No, she can't.</span></div>
+<div class="box">⭐ <b>¿Qué tan bien?</b> <span class="say" data-t="I can swim very well.">I can swim very well.</span> (muy bien) · <span class="say" data-t="I can sing well.">I can sing well.</span> (bien) · <span class="say" data-t="I can dance a little.">I can dance a little.</span> (un poco)</div>
+<h3>✍️ Práctica</h3><p>Elige la mejor respuesta.</p><div id="q3"></div>
+<button class="btn" data-chk="s3">✔ Verificar respuestas</button><p class="msg" aria-live="polite"></p>
+</section>
+
+<section class="card" id="s4" style="--col:var(--g)">
+<h2><span class="n">4</span>Listening 🎧</h2>
+<p>Escucha la conversación entre <b>Sam</b> y <b>Nina</b>. Primero intenta solo con tus oídos 👂 y, si lo necesitas, usa “Mostrar transcripción”. Puedes escucharla todas las veces que quieras (también con voz lenta 🐢) y luego responde.</p>
+<button class="btn" id="play">▶ Escuchar la conversación</button><button class="btn" id="tbtn">📄 Mostrar transcripción</button><div class="box" id="tr" hidden></div>
+<div id="lq"></div>
+<button class="btn" data-chk="s4">✔ Verificar respuestas</button><p class="msg" aria-live="polite"></p>
+</section>
+
+<section class="card" id="s5" style="--col:var(--o)">
+<h2><span class="n">5</span>Reading 📖</h2>
+<p>Lee el texto. Toca cualquier línea para escucharla.</p>
+<div class="box" id="rd"></div>
+<button class="btn" id="rall">▶ Escuchar todo el texto</button>
+<div class="box">📚 <b>Vocabulario:</b> <span class="say" data-t="but">but</span> = pero · <span class="say" data-t="draw">draw</span> = dibujar · <span class="say" data-t="student">student</span> = estudiante · <span class="say" data-t="friend">friend</span> = amigo/a</div>
+<p>¿Verdadero o falso?</p>
+<div id="rq"></div>
+<button class="btn" data-chk="s5">✔ Verificar respuestas</button><p class="msg" aria-live="polite"></p>
+</section>
+
+<section class="card" id="s6" style="--col:var(--v)">
+<h2><span class="n">6</span>Dictado ✏️</h2>
+<p>Toca 🔊, escucha y escribe <b>exactamente</b> lo que oyes. Las mayúsculas y los signos no importan; la ortografía sí. Escribe <b>can't</b> con apóstrofo (').</p>
+<div id="dq"></div>
+<button class="btn" data-chk="s6">✔ Verificar respuestas</button><p class="msg" aria-live="polite"></p>
+</section>
+
+<section class="card" id="s7" style="--col:var(--p)">
+<h2><span class="n">7</span>Writing 📝</h2>
+<h3>Parte A: completa la oración</h3>
+<p>Escribe la palabra que falta. Si necesitas <b>can't</b>, escríbelo con apóstrofo ('). En el audio, la palabra que falta suena como “blank”.</p>
+<div id="gq"></div>
+<button class="btn" data-chk="s7">✔ Verificar respuestas</button><p class="msg" aria-live="polite"></p>
+<h3>Parte B: escribe sobre ti</h3>
+<p>Escribe 5 o 6 oraciones en inglés. Debe incluir: <b>1)</b> tu nombre, <b>2)</b> al menos dos cosas que puedes hacer (I can…), <b>3)</b> una cosa que no puedes hacer (I can't…) y <b>4)</b> una pregunta para otra persona (Can you…?).</p>
+<textarea id="wt" aria-label="Tu texto en inglés" placeholder="Escribe aquí…" autocapitalize="sentences" spellcheck="false"></textarea>
+<button class="btn" id="wchk">✔ Verificar mi texto</button><button class="spk" id="wspk" aria-label="Escuchar mi texto" title="Escuchar mi texto">🔊</button>
+<ul id="wl"></ul><p class="msg2" id="wm" aria-live="polite"></p>
+</section>
+
+<section class="card" id="s8" style="--col:var(--c)">
+<h2><span class="n">8</span>Cierre y reto oral 🎤</h2>
+<p><b>Hoy aprendiste:</b> vocabulario de habilidades, <b>can</b> y <b>can't</b>, las preguntas <b>Can you…?</b> con sus respuestas cortas, y cómo decir qué tan bien haces algo.</p>
+<p><b>Reto oral:</b> en voz alta, frente al espejo o con un amigo, marca cada punto cuando lo hayas dicho.</p>
+<label class="opt"><input type="checkbox"> Dije dos cosas que puedo hacer</label>
+<label class="opt"><input type="checkbox"> Dije una cosa que no puedo hacer</label>
+<label class="opt"><input type="checkbox"> Pregunté “Can you…?”</label>
+<p>Tu puntaje: <b id="sc2">0 / 76</b></p>
+<p class="say" data-t="Great job! Yes, you can! See you in the next class!" style="font-weight:800;font-size:1.3em">Great job! Yes, you can! See you in the next class! 👋</p>
+</section>
+</div>
+<button class="fab" id="slow">🐢 Voz lenta: no</button>
+<script>
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)],R=s=>[...s].reverse().join('');
+const N=s=>s.toLowerCase().replace(/[’`]/g,"'").replace(/[.,!?¿¡]/g,'').replace(/\b(i|you|we|they|he|she)'(m|re|s)\b/g,(m,a,b)=>a+' '+(b=='m'?'am':b=='re'?'are':'is')).replace(/\s+/g,' ').trim();
+const ss=window.speechSynthesis;let slow=false,V=[];
+const lv=()=>{V=ss?ss.getVoices():[]};if(ss){lv();ss.onvoiceschanged=lv}
+function speak(items){
+ if(!ss){alert('Tu navegador no admite audio. Prueba con Chrome, Edge o Safari.');return}
+ ss.cancel();
+ const us=V.filter(x=>x.lang.replace('_','-')=='en-US');
+ const v=us.find(x=>/Google|Samantha|Natural|Aria|Jenny/.test(x.name))||us[0];
+ items.forEach(([t,p])=>{const u=new SpeechSynthesisUtterance(t);u.lang='en-US';if(v)u.voice=v;u.rate=slow?.6:.9;u.pitch=p||1;ss.speak(u)});
+}
+const sp=t=>`<button class="spk" data-t="${t}" aria-label="Escuchar en inglés" title="Escuchar">🔊</button>`;
+const sc={},TOT=76;
+const upd=()=>{const s=Object.values(sc).reduce((a,b)=>a+b,0)+' / '+TOT;$('#sc').textContent=s;$('#sc2').textContent=s};
+document.addEventListener('click',e=>{
+ const b=e.target.closest('[data-t],[data-r]');
+ if(b){e.preventDefault();speak([[b.dataset.r?R(b.dataset.r):b.dataset.t,+b.dataset.p||1]])}
+});
+document.addEventListener('keydown',e=>{if(e.key=='Enter'&&e.target.matches('.say'))e.target.click()});
+$('#slow').onclick=e=>{slow=!slow;e.target.textContent='🐢 Voz lenta: '+(slow?'sí':'no')};
+
+/* generador de preguntas de opción múltiple */
+const mc=(id,qs,os)=>qs.map((x,i)=>`<fieldset class="q" data-a="${x.a}"><legend>${i+1}. ${x.q}${x.t?sp(x.t):''}</legend>${x.o.map((o,j)=>`<label class="opt"><input type="radio" name="${id}${i}" value="${j}"><span>${o}</span>${os?sp(o):''}</label>`).join('')}<span class="fb"></span></fieldset>`).join('');
+
+/* verificación */
+function ok(q){
+ const a=q.dataset.a,t=$('input[type=text]',q),r=$('input[type=radio]:checked',q),s=$('select',q);
+ if(t)return N(t.value)==N(R(a));
+ const v=r?r.value:s?s.value:'';
+ return v!==''&&(+v+3)*7==a;
+}
+document.addEventListener('click',e=>{
+ const c=e.target.closest('[data-chk]');if(!c)return;
+ const s=$('#'+c.dataset.chk),qs=$$('.q',s);let n=0;
+ qs.forEach(q=>{const g=ok(q);if(g)n++;$('.fb',q).textContent=g?'✅':'❌'});
+ sc[s.id]=n;upd();
+ $('.msg',s).textContent=n==qs.length?`🎉 ¡Perfecto! ${n}/${qs.length}`:`${n}/${qs.length} correctas. Revisa las ❌, vuelve a escuchar o leer y inténtalo otra vez.`;
+});
+
+/* contenido */
+const cards=(id,a)=>{$(id).innerHTML=a.map(([e,s,i])=>`<div class="gc say" data-t="${e}" role="button" tabindex="0"><div class="em">${i}</div><b>${e}</b><small>${s}</small></div>`).join('')};
+const mk=(id,pre,a,nt)=>{$(id).innerHTML=mc(pre,a.map(([q,o,k])=>({q,t:(nt||q.includes('¿'))?'':q.replace('___','blank'),o,a:(k+3)*7})),true)};
+const PR=[["swim","nadar","🏊"],["run","correr","🏃"],["cook","cocinar","🍳"],["drive a car","manejar un auto","🚗"],["sing","cantar","🎤"],["dance","bailar","💃"],["play the guitar","tocar la guitarra","🎸"],["play soccer","jugar fútbol","⚽"],["speak English","hablar inglés","🗣️"],["ride a bike","andar en bicicleta","🚲"],["draw","dibujar","🎨"],["use a computer","usar un computador","💻"]];
+cards('#gr',PR);
+const ES=PR.map(g=>g[1]),L=ES.length;
+$('#pq').innerHTML=mc('p',PR.map(([e],i)=>{const o=[ES[i],ES[(i+3)%L],ES[(i+6)%L]],k=i%3;[o[0],o[k]]=[o[k],o[0]];return{q:'¿Qué significa “'+e+'”?',t:e,o,a:(k+3)*7}}));
+const C=['can',"can't"];
+mk('#q2','a',[["A fish ___ swim.",C,0],["A dog ___ drive a car.",C,1],["A mechanic ___ drive a car.",C,0],["Babies ___ speak English.",C,1],["She can ___ the guitar.",['play','plays'],0],["He can ___ English.",['speaks','speak'],1],["Tom can ___ a bike.",['rides','ride'],1],["Ana can ___ a computer.",['use','uses'],0],["I can't ___ a car.",['drive','drives'],0],["They can ___ soccer.",['plays','play'],1]]);
+mk('#q3','h',[["Can you swim?",["Yes, I can.","Yes, I do.","Yes, I'm."],0],["Can she cook?",["No, she isn't.","No, she can't.","No, she doesn't."],1],["Can they sing?",["Yes, they are.","Yes, they do.","Yes, they can."],2],["Can he drive?",["No, he can't.","No, he isn't.","No, he doesn't."],0],["Can you dance?",["Yes, I do.","Yes, I can.","Yes, I am."],1],["Can you play the guitar?",["No, I can't.","No, I'm not.","No, I don't."],0],["She can speak English ___.",["very well","very good"],0],["Can Ana speak English?",["Yes, she can.","Yes, she does.","Yes, she is."],0],["Can you ride a bike?",["No, I don't.","No, I can't.","No, I'm not."],1],["¿Cuál significa «un poco»?",["very well","a little","well"],1]]);
+
+/* Listening (guion invertido) */
+const D=[[.75,"?ratiug eht yalp uoy naC !aniN ,iH"],[1.25,"?uoy dnA .llew yrev yalp nac I .nac I ,seY"],[.75,"!gnis nac I tuB .t'nac I ,oN"],[1.25,"?ecnad uoy naC !taerG"],[.75,"?miws uoy naC .t'nac I ,oN"],[1.25,".ekib a edir nac I dna miws nac I .nac I ,seY"],[.75,"!rac a evird nac I .miws t'nac I"],[1.25,"!maS ,retal uoy eeS"]];
+$('#play').onclick=()=>speak(D.map(([p,r])=>[R(r),p]));
+$('#tbtn').onclick=()=>{const t=$('#tr');t.hidden=!t.hidden;$('#tbtn').textContent=t.hidden?'📄 Mostrar transcripción':'🙈 Ocultar transcripción';if(!t.hidden)t.innerHTML=D.map(([p,r])=>{const l=R(r);return `<p class="say" tabindex="0" role="button" data-t="${l}" data-p="${p}" style="margin:4px 0"><b>${p<1?'Sam':'Nina'}:</b> ${l}</p>`}).join('')};
+const YC=["Yes, he can.","No, he can't."],YS=["Yes, she can.","No, she can't."];
+mk('#lq','l',[["¿Cómo se llama el hombre?",['Sam','Tom','Sean'],0],["¿Cómo se llama la mujer?",['Nora','Nina','Mia'],1],["¿Qué toca Nina?",['the guitar','the piano','the drums'],0],["¿Cómo toca Nina?",['a little','very well','not well'],1],["¿Puede cantar Sam?",YC,0],["¿Puede bailar Sam?",YC,1],["¿Puede nadar Nina?",YS,0],["¿Puede nadar Sam?",YC,1],["¿Qué más puede hacer Nina?",['ride a bike','drive a car','cook'],0],["¿Qué puede hacer Sam?",['ride a bike','drive a car','play the guitar'],1]],true);
+
+/* Reading */
+const RD=["Hello! My name is Maria.","I'm a student.","I can swim and I can dance.","I can't drive a car.","My friend Jack can play the guitar.","He can't sing, but he can draw.","Jack and I can speak English.","Can you speak English? Yes, you can!"];
+$('#rd').innerHTML=RD.map(l=>`<p class="say" data-t="${l}" style="margin:4px 0;font-size:1.1em">${l}</p>`).join('');
+$('#rall').onclick=()=>speak(RD.map(t=>[t,1]));
+const VF=['Verdadero','Falso'];
+$('#rq').innerHTML=mc('r',[["Maria is a student.",0],["Maria can swim.",0],["Maria can drive a car.",1],["Maria can't dance.",1],["Jack can play the guitar.",0],["Jack can sing.",1],["Jack can draw.",0],["Jack can't play the guitar.",1],["Maria and Jack can speak English.",0],["Maria can't swim.",1]].map(([q,k])=>({q,t:q,o:VF,a:(k+3)*7})));
+
+/* Dictado (invertido) */
+const DT=[".miws nac I",".evird t'nac ehS","?ecnad uoy naC",".nac I ,seY",".t'nac I ,oN",".ratiug eht yalp nac eH",".hsilgnE kaeps nac eW",".gnis t'nac yehT","?ekib a edir ehs naC",".llew yrev kooc nac I"];
+$('#dq').innerHTML=DT.map((a,i)=>`<div class="q" data-a="${a}"><b>${i+1}.</b> <button class="spk" data-r="${a}" aria-label="Escuchar dictado ${i+1}" title="Escuchar">🔊</button> <input type="text" class="wide" placeholder="Escribe lo que oyes…" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Dictado ${i+1}"><span class="fb"></span></div>`).join('');
+
+/* Writing A */
+const GP=[["I ___ swim very well.","nac"],["A cat ___ drive a car.","t'nac"],["He can ___ the guitar.","yalp"],["We can ___ English.","kaeps"],["They can ___ a bike.","edir"],["Tom can ___ a car.","evird"],["She can ___ food.","kooc"],["You can ___ a computer.","esu"],["I can ___ in the pool.","miws"],["Can you ___ soccer?","yalp"]];
+$('#gq').innerHTML=GP.map(([s,a],i)=>`<div class="q" data-a="${a}">${i+1}. ${s.split('___').join('<input type="text" size="4" style="width:5em" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Palabra que falta '+(i+1)+'">')}${sp(s.replace('___','blank'))}<span class="fb"></span></div>`).join('');
+
+/* Writing B */
+const W=[["Tu nombre",t=>/(my name is|i am|i'm)\s+(?!an?\b|from\b)\w+/i.test(t)],["Al menos dos cosas que puedes hacer (I can…)",t=>(t.match(/\bi can\s+\w+/gi)||[]).length>=2],["Una cosa que no puedes hacer (I can't…)",t=>/\bi (can't|cannot)\s+\w+/i.test(t)],["Una pregunta (Can you…?)",t=>/\bcan (you|he|she|they|we)\s+[^?]+\?/i.test(t)]];
+$('#wchk').onclick=()=>{
+ const t=$('#wt').value.replace(/[’`]/g,"'");let n=0;
+ $('#wl').innerHTML=W.map(([l,f])=>{const g=f(t);if(g)n++;return `<li>${g?'✅':'❌'} ${l}</li>`}).join('');
+ sc.w=n;upd();
+ $('#wm').textContent=n==4?'🎉 ¡Excelente texto!':'Te faltan elementos. Corrige tu texto y verifica de nuevo.';
+};
+$('#wspk').onclick=()=>{const t=$('#wt').value.trim();if(t)speak([[t,1]])};
+$$('.say').forEach(x=>{x.tabIndex=0;x.setAttribute('role','button')});
+
+</script>
+</body></html>
